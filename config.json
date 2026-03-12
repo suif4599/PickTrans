@@ -1,0 +1,28 @@
+{
+    "engines": {
+        "SDCVEngine": [
+            {
+                "executable": "/usr/bin/sdcv",
+                "path": "/home/suif4599/Downloads",
+                "prompt": "Enter word or phrase:",
+                "timeout": 5,
+                "errorprompt": "Nothing similar to"
+            }
+        ],
+        "OllamaEngine": [
+            {
+                "host": "localhost",
+                "port": 11434,
+                "model_name": "HY-MT1.5-1.8B-Q8_0:latest",
+                "prompt_template": "<｜hy_begin▁of▁sentence｜>你是一个翻译助手，专门将输入的文本翻译成中文。<｜hy_place▁holder▁no▁3｜><｜hy_User｜>{input}<｜hy_Assistant｜>"
+            }
+        ]
+    },
+    "engine-order": ["SDCVEngine", "OllamaEngine"],
+    "app": {
+        "trigger_hotkey": "Double(LEFTALT)",
+        "exit_hotkey": "ESC",
+        "width": 0.3,
+        "height": 0.4
+    }
+}
